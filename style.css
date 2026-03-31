@@ -36,11 +36,13 @@ img {
     background: #2f3a54;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1100;
-    transition: min-height 0.5s;
+    transition: min-height 0.5s, background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .main-menu.scroll {
     min-height: 60px;
+    background: rgba(47, 58, 84, 0.96);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .main-menu>.menu-area {
@@ -54,11 +56,14 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    transition: min-height 0.5s;
+    transition: min-height 0.5s, padding 0.35s ease, gap 0.35s ease;
 }
 
 .main-menu>.menu-area.scroll {
     min-height: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 16px;
 }
 
 .main-menu>.menu-area>.logo-menu,
@@ -76,8 +81,8 @@ img {
 }
 
 .main-menu>.menu-area>.logo-menu.scroll {
-    width: 42px;
-    height: 42px;
+    width: 42px !important;
+    height: 42px !important;
 }
 
 .main-menu>.menu-area>.menu-options {
