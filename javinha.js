@@ -1,4 +1,17 @@
 const CAROUSEL_GAP = 20;
+const SCROLL_ACTIVATION_OFFSET = 24;
+
+const mainMenu = document.querySelector('.main-menu');
+const menuArea = document.querySelector('.main-menu > .menu-area');
+const menuLogo = document.querySelector('.main-menu > .menu-area > .logo-menu');
+
+function updateHeaderOnScroll() {
+    const isScrolled = window.scrollY > SCROLL_ACTIVATION_OFFSET;
+
+    mainMenu?.classList.toggle('scroll', isScrolled);
+    menuArea?.classList.toggle('scroll', isScrolled);
+    menuLogo?.classList.toggle('scroll', isScrolled);
+}
 
 function getVisibleCards() {
     if (window.innerWidth <= 640) return 1;
@@ -104,6 +117,8 @@ window.addEventListener('resize', () => {
     });
 });
 
+window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+
 const produtos = [
     {
         imagem: "https://m.media-amazon.com/images/I/51qKk5of8kL.jpg",
@@ -183,3 +198,4 @@ function renderProdutos() {
 }
 
 renderProdutos();
+updateHeaderOnScroll();
