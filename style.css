@@ -78,6 +78,7 @@ img {
     transition: width 0.5s, height 0.5s, border-radius 0.5s;
     left: 5%;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .main-menu>.menu-area>.logo-menu.scroll {
